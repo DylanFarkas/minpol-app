@@ -88,7 +88,7 @@ export default function App() {
             <button
               onClick={handleRun}
               disabled={!canRun}
-              className="rounded-xl bg-slate-900 px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-slate-400/40 disabled:cursor-not-allowed disabled:opacity-50 dark:bg-white dark:text-gray-950 dark:hover:bg-slate-200 dark:focus:ring-white/20"
+              className="rounded-xl bg-slate-900 px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-slate-400/40 disabled:cursor-not-allowed disabled:opacity-50 dark:bg-white dark:text-gray-950 dark:hover:bg-slate-200 dark:focus:ring-white/20 cursor-pointer"
             >
               {loadingSolve ? "Ejecutando..." : "Ejecutar"}
             </button>
@@ -135,7 +135,6 @@ export default function App() {
 
       <footer className="border-t border-slate-200 bg-white dark:border-white/10 dark:bg-gray-950">
         <div className="mx-auto max-w-6xl px-4 py-4 text-xs text-slate-500 dark:text-slate-400">
-          Hecho para correr MinPol como Dios manda: entrada .txt → ejecución MiniZinc → salida + visualización.
         </div>
       </footer>
     </div>

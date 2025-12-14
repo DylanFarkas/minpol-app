@@ -80,6 +80,7 @@ export default function ResultView({ data }) {
         <div className="flex items-center gap-2">
           <Badge>{time_ms} ms</Badge>
           <Badge>pol_int: {pol_int}</Badge>
+          <Badge>Nodos B&B: {data.solver_stats?.nodes}</Badge>
         </div>
       }
     >

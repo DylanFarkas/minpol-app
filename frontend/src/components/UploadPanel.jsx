@@ -19,7 +19,7 @@ export default function UploadPanel({ file, onPickFile, onClear, isLoading }) {
 
       <div className="px-5 py-4">
         <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
-          <label className="group relative flex cursor-pointer items-center justify-center rounded-2xl border border-dashed border-slate-300 bg-slate-50 px-4 py-6 text-sm text-slate-600 transition hover:bg-slate-100 focus-within:ring-2 focus-within:ring-slate-400/40 dark:border-white/15 dark:bg-gray-950 dark:text-slate-300 dark:hover:bg-gray-900 dark:focus-within:ring-white/20">
+          <label className="group relative flex cursor-pointer items-center justify-center rounded-2xl border border-dashed border-slate-300 bg-slate-50 px-4 py-6 text-sm text-slate-600 transition hover:bg-slate-100 focus-within:ring-2 focus-within:ring-slate-400/40 dark:border-white/15 dark:bg-gray-950 dark:text-slate-300 dark:hover:bg-gray-900 dark:focus-within:ring-white/20 w-full">
             <input
               type="file"
               accept=".txt"
@@ -47,7 +47,7 @@ export default function UploadPanel({ file, onPickFile, onClear, isLoading }) {
             <button
               onClick={onClear}
               disabled={!file || isLoading}
-              className="rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm font-semibold text-slate-700 shadow-sm transition hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-slate-400/40 disabled:cursor-not-allowed disabled:opacity-50 dark:border-white/10 dark:bg-gray-900 dark:text-slate-200 dark:hover:bg-gray-800 dark:focus:ring-white/20"
+              className="rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm font-semibold text-slate-700 shadow-sm transition hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-slate-400/40 disabled:cursor-not-allowed disabled:opacity-50 dark:border-white/10 dark:bg-gray-900 dark:text-slate-200 dark:hover:bg-gray-800 dark:focus:ring-white/20 cursor-pointer"
             >
               Limpiar
             </button>

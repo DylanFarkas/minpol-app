@@ -1,4 +1,5 @@
 from typing import List, Dict
+import re
 
 def parse_mzn_output(stdout: str) -> Dict:
     # Espera:
@@ -34,3 +35,13 @@ def parse_mzn_output(stdout: str) -> Dict:
         "x_med": x2,
         "x_high": x3
     }
+
+def extract_solver_stats(stderr: str) -> dict:
+    stats = {}
+    for line in stderr.splitlines():
+        if "%%%mzn-stat:" in line:
+            m = re.match(r".*%%%mzn-stat:\s*(\w+)\s*=\s*([0-9.]+)", line)
+            if m:
+                key, value = m.groups()
+                stats[key] = float(value) if "." in value else int(value)
+    return stats

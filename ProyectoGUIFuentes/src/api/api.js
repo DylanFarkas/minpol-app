@@ -3,7 +3,6 @@ import axios from "axios";
 // Creamos una instancia para centralizar config
 const api = axios.create({
   baseURL: "http://localhost:8000/api",
-  timeout: 30000, 
 });
 
 // Manejo de errores consistente

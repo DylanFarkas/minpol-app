@@ -37,7 +37,7 @@ async def solve_instance(file: UploadFile = File(...)):
     try:
         inst = parse_instance_txt(text)
         dzn = to_dzn(inst)
-        stdout, stderr, time_ms, stats = run_minizinc(MODEL_PATH, dzn, timeout_s=300)
+        stdout, stderr, time_ms, stats = run_minizinc(MODEL_PATH, dzn, timeout_s=1200)
         result = parse_mzn_output(stdout)
     except HTTPException:
         raise

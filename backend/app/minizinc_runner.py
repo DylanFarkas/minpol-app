@@ -51,7 +51,7 @@ MINIZINC_BIN = get_minizinc_bin()
 def run_minizinc(
     model_path: Path,
     dzn_content: str,
-    timeout_s: int = 300,
+    timeout_s: int = 1200,
 ):
     """
     Ejecuta MiniZinc de forma portable (Windows / macOS / Linux)

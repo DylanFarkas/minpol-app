@@ -75,7 +75,6 @@ export default function ResultView({ data }) {
   return (
     <Card
       title="Resultado"
-      subtitle="Salida del solver (formato del proyecto) + vista amigable."
       right={
         <div className="flex items-center gap-2">
           <Badge>{time_ms} ms</Badge>
